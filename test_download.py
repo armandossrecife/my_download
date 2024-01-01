@@ -43,7 +43,6 @@ class TestDownload(unittest.TestCase):
     def test_executa_download_progress(self):
         url = 'https://github.com/armandossrecife/teste/raw/main/James%20Blunt%20-%20Goodbye%20My%20lover%20%5BLive%5D.mp4'
         path_arquivo = 'james_blunt_goodbye_my_lover_live.mp4'
-        
         try:
             myDownloadDummpy = dummy.MyDownloadDummy()
             myDownloadDummpy.download_with_progress_bar(url, path_arquivo)

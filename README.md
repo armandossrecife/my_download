@@ -1,5 +1,7 @@
 # my_download
 
+Executa a Aplicação GUI principal 
+
 ```bash
 python3 main.py
 ```
@@ -80,6 +82,14 @@ Observe the progress bar and label updating as the download progresses.
 
 **Error Handling**: The Download class includes basic error handling for invalid URLs and connection issues.
 
+# Install dependencies
+
+```bash
+pip install requests
+pip install tqdm
+pip install requests-mock
+```
+
 # Perform automatic tests
 
 ## Run your tests with unittest
@@ -94,7 +104,7 @@ python3 -m unittest test_util test_download
 coverage run -m unittest test_util.py test_download.py
 ```
 
-## Generate an HTML report:
+## Generate an HTML report related to coverage tests:
 
 ```bash
 coverage html
