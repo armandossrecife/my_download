@@ -29,7 +29,6 @@ class TestUtil(unittest.TestCase):
         url = 'https://example.com'
         with self.assertRaises(ValueError) as context:
             util.extrair_nome_extensao_url(url)
-        print(f'str(context.exception): {str(context.exception)}')
         self.assertEqual(str(context.exception), "Missing file path in URL")
 
     def test_extrair_nome_extensao_url_unsupported_protocol(self):
@@ -37,5 +36,4 @@ class TestUtil(unittest.TestCase):
         url = 'mailto:someone@example.com'
         with self.assertRaises(ValueError) as context:
             util.extrair_nome_extensao_url(url)
-        print(f'str(context.exception): {str(context.exception)}')            
         self.assertIn("Unsupported protocol:", str(context.exception))
