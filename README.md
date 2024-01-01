@@ -90,7 +90,7 @@ pip install tqdm
 pip install requests-mock
 ```
 
-# Perform automatic tests
+# Perform automated tests
 
 ## Run your tests with unittest
 
