@@ -4,14 +4,21 @@ from urllib.parse import urlparse
 import os
 
 class Util:
-  def extrair_nome_extensao_url(self,url):
-    # Faz o parse da URL
-    parsed_url = urlparse(url)
-    # Obtém o caminho do arquivo
-    caminho_arquivo = parsed_url.path
-    # Extrai o nome do arquivo e a extensão
-    nome_arquivo, extensao = os.path.splitext(os.path.basename(caminho_arquivo))
-    return nome_arquivo, extensao
+    def extrair_nome_extensao_url(self, url):
+        try:
+            parsed_url = urlparse(url)
+            if parsed_url.scheme not in ('http', 'https', 'ftp'):
+                raise ValueError(f"Unsupported protocol: {parsed_url.scheme}")
+
+            caminho_arquivo = parsed_url.path
+            if not caminho_arquivo:
+                raise ValueError("Missing file path in URL")
+
+            nome_arquivo, extensao = os.path.splitext(os.path.basename(caminho_arquivo))
+            return nome_arquivo, extensao
+
+        except Exception as ex:
+            raise ValueError(f"{str(ex)}") from ex  # Preserve original exception
 
 class Download:
     def __init__(self, url, path_arquivo):
