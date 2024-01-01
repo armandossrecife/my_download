@@ -13,7 +13,6 @@ class TestDownload(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             download = Download(url, path_arquivo)
             download.executa()
-        print(f'str(context.exception): {str(context.exception)}')
         self.assertEqual(str(context.exception), "URL inválida. Certifique-se de fornecer uma URL válida.")
 
     @requests_mock.Mocker()
@@ -24,7 +23,6 @@ class TestDownload(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             download = Download(url, path_arquivo)
             download.executa()
-        print(f'str(context.exception): {str(context.exception)}')
         self.assertIn("Erro na conexão", str(context.exception))
 
     @requests_mock.Mocker()
@@ -35,7 +33,6 @@ class TestDownload(unittest.TestCase):
         with self.assertRaises(Exception) as context:
             download = Download(url, path_arquivo)
             download.executa()
-        print(f'str(context.exception): {str(context.exception)}')
         self.assertIn("No such file or directory:", str(context.exception))
 
     def test_executa_download_com_sucesso(self):

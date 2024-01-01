@@ -79,4 +79,23 @@ Observe the progress bar and label updating as the download progresses.
 **Informative Progress**: The progress bar and label provide clear visual feedback during the download process.
 
 **Error Handling**: The Download class includes basic error handling for invalid URLs and connection issues.
+
+# Perform automatic tests
+
+## Run your tests with unittest
+
+```bash
+python3 -m unittest test_util test_download
+```
+
+## Run your tests with Coverage
   
+```bash
+coverage run -m unittest test_util.py test_download.py
+```
+
+## Generate an HTML report:
+
+```bash
+coverage html
+```
