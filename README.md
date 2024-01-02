@@ -88,6 +88,7 @@ Observe the progress bar and label updating as the download progresses.
 pip install requests
 pip install tqdm
 pip install requests-mock
+pip install html-testRunner
 ```
 
 # Perform automated tests
