@@ -109,3 +109,16 @@ coverage run -m unittest test_util.py test_download.py
 ```bash
 coverage html
 ```
+
+# Perform automated tests in Test Suite
+
+Run the coverage and test runner
+
+```bash
+coverage run runner.py 
+```
+
+Generate the html report
+```bash
+coverage html
+```
