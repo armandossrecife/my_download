@@ -57,7 +57,7 @@ class MyWindow:
                 self.my_var.set(str(int(percentual_avanco)) + '%')
                 self.progress_bar["value"] = current_progress
                 self.progress_bar["maximum"] = total_size
-                self.app.update_idletasks()  # Update the progress bar smoothly
+                self.progress_bar.update_idletasks()
 
             download.set_callback(progress_callback)
             self.my_msg.set('Aguarde...')
