@@ -91,6 +91,12 @@ pip install requests-mock
 pip install html-testRunner
 ```
 
+# Running the main script
+
+```bash
+python3 main.py
+```
+
 # Perform automated tests
 
 ## Run your tests with unittest
